@@ -258,11 +258,13 @@ The website sends selected ICD-O topography and histology filters to the backend
 
 
 ## Generated outputs
-Large generated files, such as full results dictionaries, may be produced locally during testing or review. These files should be reviewed before being committed to the repository, especially if they are too large for standard GitHub upload.
+The repository includes `results_dictionary.json`, a large generated output file stored using Git LFS.
+
+This file contains generated mapping outputs across ICD-O topography and histology combinations and is included for review rather than manual editing.
+
+Because this file is large, GitHub may not display its contents directly in the browser. It can be downloaded through GitHub or pulled using Git LFS.
 
 ## Notes and limitations
 Some mappings are intentionally conservative. Where a TCGA project cannot be assigned confidently, the workflow may return a CRUK term without a TCGA label.
 
 Some broad topography-only mappings are documented separately in the validation notes to distinguish expected behaviour from cases requiring future review.
-
-The SNOMED CT to ICD-O workflow is exploratory and supplementary. It supports review of SNOMED-to-ICD-O links, but it is separate from the main ICD-O to CRUK/TCGA mapping pipeline.
