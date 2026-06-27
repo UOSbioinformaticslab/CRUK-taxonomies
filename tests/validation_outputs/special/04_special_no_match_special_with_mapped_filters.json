@@ -1,0 +1,18 @@
+{
+  "datasetFilters": [
+    {
+      "id": "test_topo_04",
+      "label": "C50 Breast",
+      "category": "icdOTopography",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    },
+    {
+      "id": "test_hist_04",
+      "label": "8140/3 Adenocarcinoma, NOS",
+      "category": "icdOHistology",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    }
+  ]
+}

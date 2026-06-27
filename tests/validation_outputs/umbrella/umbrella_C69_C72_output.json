@@ -1,0 +1,52 @@
+{
+  "topography_labels": [
+    "C69-C72 Eye, brain and other parts of central nervous system"
+  ],
+  "histology_label": null,
+  "existing_cruk_labels": [],
+  "age_range_max": null,
+  "childhood_case_detected": false,
+  "male_case_detected": false,
+  "results": [
+    {
+      "input_term": {
+        "id": null,
+        "label": "C69-C72 Eye, brain and other parts of central nervous system",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "topography_label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "histology_label": null,
+      "matched_level": "umbrella",
+      "matched_schema_term": "C69-C72 Eye, brain and other parts of central nervous system",
+      "matched_rule": null,
+      "CRUK": [
+        {
+          "id": "0_0_2_33",
+          "label": "Eye cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        },
+        {
+          "id": "0_0_2_13",
+          "label": "Brain tumours",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        },
+        {
+          "id": "0_0_2_93",
+          "label": "Spinal cord tumours",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "TCGA": []
+    }
+  ],
+  "unmatched": [],
+  "encountered_problems": []
+}

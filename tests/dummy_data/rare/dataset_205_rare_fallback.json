@@ -1,0 +1,25 @@
+    {
+    "datasetFilters": [
+        {
+        "id": "icdo_top_205",
+        "label": "C80 Unknown primary site",
+        "category": "Unknown",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "hist_205",
+        "label": "8000/3 Neoplasm, malignant",
+        "category": "Histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "0_0_2_84",
+        "label": "Rare cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }

@@ -1,0 +1,18 @@
+{
+    "datasetFilters": [
+        {
+            "id": "0_0_0_x",
+            "label": "C17 Small intestine",
+            "category": "icdOTopography",
+            "primaryGroup": "ICD-O",
+            "description": ""
+        },
+        {
+            "id": "0_0_1_x",
+            "label": "8240/3 Neuroendocrine tumor, NOS",
+            "category": "icdOHistology",
+            "primaryGroup": "ICD-O",
+            "description": ""
+        }
+    ]
+}

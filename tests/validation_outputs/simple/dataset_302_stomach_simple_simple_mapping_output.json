@@ -1,0 +1,53 @@
+{
+  "input_dataset_file": "dataset_302_stomach_simple.json",
+  "number_of_input_filters": 3,
+  "number_of_output_filters": 3,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Stomach cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Gastric cancer"
+  ],
+  "expected_tcga_labels": [
+    "STAD (Stomach adenocarcinoma)"
+  ],
+  "predicted_tcga_labels": [
+    "STAD (Stomach adenocarcinoma)"
+  ],
+  "cruk_label_match": false,
+  "tcga_label_match": true,
+  "passed": false,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c16",
+        "label": "C16 Stomach",
+        "category": "C16 Stomach",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "matched_schema_term": "C16 Stomach",
+      "cruk_results": [
+        {
+          "id": "0_0_2_36",
+          "label": "Gastric cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": [
+        {
+          "id": "0_0_4_30",
+          "label": "STAD (Stomach adenocarcinoma)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/simple/dataset_302_stomach_simple_simple_20260606_205744.log"
+}

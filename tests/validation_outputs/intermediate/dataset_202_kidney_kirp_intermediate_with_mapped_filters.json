@@ -1,0 +1,35 @@
+{
+  "datasetId": 202,
+  "datasetLabel": "Kidney KIRP override case",
+  "scenario": "Histology matches the kidney papillary override, so KIRP should be returned.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c64",
+      "label": "C64 Kidney",
+      "category": "C64-C68 Urinary tract",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8260_3",
+      "label": "8260/3 Papillary adenocarcinoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_46",
+      "label": "Kidney cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_14",
+      "label": "KIRP (Kidney renal papillary cell carcinoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

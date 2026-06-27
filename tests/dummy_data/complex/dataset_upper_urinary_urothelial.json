@@ -1,0 +1,25 @@
+    {
+    "datasetFilters": [
+        {
+        "id": "test_topo_uro_1",
+        "label": "C65 Renal pelvis",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "test_hist_uro_1",
+        "label": "8120/3 Transitional cell carcinoma, NOS",
+        "category": "icdOHistology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_cruk_uro_1",
+        "label": "Upper urinary tract urothelial cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }

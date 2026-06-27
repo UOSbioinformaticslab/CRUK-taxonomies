@@ -1,0 +1,30 @@
+{
+  "input_dataset_file": "dataset_204_direct_cruk_label_rare.json",
+  "matched_schema_term": "Neuroblastoma",
+  "matched_rule": "neuroblastoma_direct",
+  "number_of_input_filters": 1,
+  "number_of_output_filters": 1,
+  "expected_cruk_labels": [
+    "Neuroblastoma"
+  ],
+  "predicted_cruk_labels": [
+    "Neuroblastoma"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "cruk_results": [
+    {
+      "id": "0_0_2_67",
+      "label": "Neuroblastoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "tcga_results": [],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/rare/dataset_204_direct_cruk_label_rare_rare_20260607_021136.log"
+}

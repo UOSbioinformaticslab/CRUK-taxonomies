@@ -1,0 +1,26 @@
+{
+  "input": {
+    "cruk_label": null,
+    "topography_label": "C50 Breast",
+    "histology_label": "8140/3 Adenocarcinoma, NOS"
+  },
+  "matched_rule_names": [],
+  "return_cruk_labels": [],
+  "return_tcga_labels": [],
+  "expected_cruk_labels": [],
+  "predicted_cruk_labels": [],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "missing_labels_in_label_key_dict": [],
+  "missing_labels_in_filter_data": [],
+  "added_cruk_filters": [],
+  "added_tcga_filters": [],
+  "number_of_added_cruk_filters": 0,
+  "number_of_added_tcga_filters": 0,
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/special/04_special_no_match_special_20260607_014448.log",
+  "input_dataset_file": "04_special_no_match.json"
+}

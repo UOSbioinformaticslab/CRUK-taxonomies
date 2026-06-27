@@ -1,0 +1,40 @@
+{
+  "topography_labels": [
+    "C71 Brain"
+  ],
+  "histology_label": null,
+  "existing_cruk_labels": [],
+  "age_range_max": null,
+  "childhood_case_detected": false,
+  "male_case_detected": false,
+  "results": [
+    {
+      "input_term": {
+        "id": null,
+        "label": "C71 Brain",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "topography_label": "C71 Brain",
+      "histology_label": null,
+      "matched_level": "intermediate",
+      "matched_schema_term": "C71 Brain",
+      "matched_rule": null,
+      "CRUK": [
+        {
+          "id": "0_0_2_13",
+          "label": "Brain tumours",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "TCGA": []
+    }
+  ],
+  "unmatched": [],
+  "encountered_problems": [
+    "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+  ]
+}

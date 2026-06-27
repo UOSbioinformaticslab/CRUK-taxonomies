@@ -1,0 +1,56 @@
+{
+  "input_dataset_file": "dataset_116_chol_intrahepatic.json",
+  "histology": "8160/3 Cholangiocarcinoma",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 4,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Cholangiocarcinoma"
+  ],
+  "predicted_cruk_labels": [
+    "Cholangiocarcinoma"
+  ],
+  "expected_tcga_labels": [
+    "CHOL (Cholangiocarcinoma)"
+  ],
+  "predicted_tcga_labels": [
+    "CHOL (Cholangiocarcinoma)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c22",
+        "label": "C22 Liver and intrahepatic bile ducts",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8160/3 Cholangiocarcinoma",
+      "matched_schema_term": "CHOL",
+      "matched_rule": "cholangiocarcinoma_exact",
+      "cruk_results": [
+        {
+          "id": "0_0_2_25",
+          "label": "Cholangiocarcinoma",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": [
+        {
+          "id": "0_0_4_4",
+          "label": "CHOL (Cholangiocarcinoma)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_116_chol_intrahepatic_complex_20260607_014100.log"
+}

@@ -1,0 +1,59 @@
+{
+  "input": {
+    "cruk_label": "Breast cancer in men",
+    "topography_label": null,
+    "histology_label": null
+  },
+  "matched_rule_names": [
+    "breast_cancer_in_men"
+  ],
+  "return_cruk_labels": [
+    "Breast cancer in men",
+    "Men's cancer"
+  ],
+  "return_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "expected_cruk_labels": [
+    "Breast cancer in men",
+    "Men's cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Breast cancer in men",
+    "Men's cancer"
+  ],
+  "expected_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "predicted_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "missing_labels_in_label_key_dict": [],
+  "missing_labels_in_filter_data": [],
+  "added_cruk_filters": [
+    {
+      "id": "0_0_2_57",
+      "label": "Men's cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "added_tcga_filters": [
+    {
+      "id": "0_0_4_22",
+      "label": "MISC (Miscellaneous)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "number_of_added_cruk_filters": 1,
+  "number_of_added_tcga_filters": 1,
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/special/06_special_breast_cancer_in_men_special_20260607_014943.log",
+  "input_dataset_file": "06_special_breast_cancer_in_men.json"
+}

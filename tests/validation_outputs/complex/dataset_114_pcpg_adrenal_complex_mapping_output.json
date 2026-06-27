@@ -1,0 +1,46 @@
+{
+  "input_dataset_file": "dataset_114_pcpg_adrenal.json",
+  "histology": "8700/3 Pheochromocytoma, NOS",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 3,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Phaeochromocytoma"
+  ],
+  "predicted_cruk_labels": [
+    "Tumours of the adrenal gland"
+  ],
+  "expected_tcga_labels": [
+    "PCPG (Pheochromocytoma and Paraganglioma)"
+  ],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": false,
+  "tcga_label_match": false,
+  "passed": false,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c74",
+        "label": "C74 Adrenal gland",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8700/3 Pheochromocytoma, NOS",
+      "matched_schema_term": "ADRENAL",
+      "matched_rule": "adrenal_exact",
+      "cruk_results": [
+        {
+          "id": "0_0_2_102",
+          "label": "Tumours of the adrenal gland",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": []
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_114_pcpg_adrenal_complex_20260607_014100.log"
+}

@@ -1,0 +1,34 @@
+{
+  "input_dataset_file": "dataset_122_melanoma_unmatched_topography.json",
+  "histology": "8720/3 Malignant melanoma, NOS",
+  "number_of_input_filters": 2,
+  "number_of_output_filters": 2,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [],
+  "predicted_cruk_labels": [],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": false,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c50",
+        "label": "C50 Breast",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8720/3 Malignant melanoma, NOS",
+      "matched_schema_term": null,
+      "matched_rule": null,
+      "cruk_results": [],
+      "tcga_results": []
+    }
+  ],
+  "encountered_problems": [
+    "No complex mapping found for input term: C50 Breast"
+  ],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_122_melanoma_unmatched_topography_complex_20260607_014106.log"
+}

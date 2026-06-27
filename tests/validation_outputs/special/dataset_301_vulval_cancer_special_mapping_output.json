@@ -1,0 +1,51 @@
+{
+  "input": {
+    "cruk_label": null,
+    "topography_label": "C51 Vulva",
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS"
+  },
+  "matched_rule_names": [
+    "womens_cancers_gynaecological_by_topography",
+    "womens_cancers_gynaecological_by_topography_and_histology",
+    "vulval_cancer_by_topography_and_histology"
+  ],
+  "return_cruk_labels": [
+    "Women's cancers (gynaecological cancer)",
+    "Vulval cancer"
+  ],
+  "return_tcga_labels": [],
+  "expected_cruk_labels": [],
+  "predicted_cruk_labels": [
+    "Women's cancers (gynaecological cancer)",
+    "Vulval cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": false,
+  "tcga_label_match": true,
+  "passed": false,
+  "missing_labels_in_label_key_dict": [],
+  "missing_labels_in_filter_data": [],
+  "added_cruk_filters": [
+    {
+      "id": "0_0_2_110",
+      "label": "Women's cancers (gynaecological cancer)",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_107",
+      "label": "Vulval cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "added_tcga_filters": [],
+  "number_of_added_cruk_filters": 2,
+  "number_of_added_tcga_filters": 0,
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/special/dataset_301_vulval_cancer_special_20260607_014445.log",
+  "input_dataset_file": "dataset_301_vulval_cancer.json"
+}

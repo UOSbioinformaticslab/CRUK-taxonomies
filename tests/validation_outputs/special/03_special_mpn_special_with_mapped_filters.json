@@ -1,0 +1,25 @@
+{
+  "datasetFilters": [
+    {
+      "id": "test_hist_03",
+      "label": "9960/3 Myeloproliferative neoplasm, NOS",
+      "category": "icdOHistology",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_64",
+      "label": "Myeloproliferative neoplasms",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_10",
+      "label": "Blood cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

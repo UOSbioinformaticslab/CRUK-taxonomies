@@ -1,0 +1,11 @@
+{
+    "datasetFilters": [
+        {
+            "id": "test_hist_03",
+            "label": "9960/3 Myeloproliferative neoplasm, NOS",
+            "category": "icdOHistology",
+            "primaryGroup": "ICD-O",
+            "description": ""
+        }
+    ]
+}

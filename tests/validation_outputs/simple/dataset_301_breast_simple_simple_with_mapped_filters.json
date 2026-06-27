@@ -1,0 +1,28 @@
+{
+  "datasetId": 301,
+  "datasetLabel": "Simple true case - breast",
+  "scenario": "Topography is covered by the simple schema, so direct CRUK and TCGA mappings should be returned.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c50",
+      "label": "C50 Breast",
+      "category": "C50 Breast",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_15",
+      "label": "Breast cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_2",
+      "label": "BRCA (Breast invasive carcinoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+    {
+    "datasetId": 201,
+    "datasetLabel": "Kidney KIRC override case",
+    "scenario": "Histology matches the kidney override, so KIRC should be returned.",
+
+    "datasetFilters": [
+        {
+        "id": "test_icdo_c64",
+        "label": "C64 Kidney",
+        "category": "C64-C68 Urinary tract",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "test_histology_8312_3",
+        "label": "8312/3 Renal cell carcinoma, NOS",
+        "category": "histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_cruk",
+        "label": "Kidney cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_tcga",
+        "label": "KIRC (Kidney renal clear cell carcinoma)",
+        "category": "cancerTypes",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }

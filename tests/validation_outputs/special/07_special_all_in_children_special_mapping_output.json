@@ -1,0 +1,69 @@
+{
+  "input": {
+    "cruk_label": "Acute lymphoblastic leukaemia (ALL) in children",
+    "topography_label": null,
+    "histology_label": null
+  },
+  "matched_rule_names": [
+    "acute_lymphoblastic_leukaemia_all_in_children"
+  ],
+  "return_cruk_labels": [
+    "Acute lymphoblastic leukaemia (ALL) in children",
+    "Children's cancers",
+    "Blood cancers"
+  ],
+  "return_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "expected_cruk_labels": [
+    "Acute lymphoblastic leukaemia (ALL) in children",
+    "Children's cancers",
+    "Blood cancers"
+  ],
+  "predicted_cruk_labels": [
+    "Acute lymphoblastic leukaemia (ALL) in children",
+    "Children's cancers",
+    "Blood cancers"
+  ],
+  "expected_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "predicted_tcga_labels": [
+    "MISC (Miscellaneous)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "missing_labels_in_label_key_dict": [],
+  "missing_labels_in_filter_data": [],
+  "added_cruk_filters": [
+    {
+      "id": "0_0_2_24",
+      "label": "Children's cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_10",
+      "label": "Blood cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "added_tcga_filters": [
+    {
+      "id": "0_0_4_22",
+      "label": "MISC (Miscellaneous)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "number_of_added_cruk_filters": 2,
+  "number_of_added_tcga_filters": 1,
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/special/07_special_all_in_children_special_20260607_014943.log",
+  "input_dataset_file": "07_special_all_in_children.json"
+}

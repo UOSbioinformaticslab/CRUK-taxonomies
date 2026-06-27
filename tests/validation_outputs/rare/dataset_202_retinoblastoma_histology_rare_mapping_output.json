@@ -1,0 +1,30 @@
+{
+  "input_dataset_file": "dataset_202_retinoblastoma_histology.json",
+  "matched_schema_term": "Retinoblastoma",
+  "matched_rule": "retinoblastoma_by_histology",
+  "number_of_input_filters": 2,
+  "number_of_output_filters": 2,
+  "expected_cruk_labels": [
+    "Retinoblastoma"
+  ],
+  "predicted_cruk_labels": [
+    "Retinoblastoma"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "cruk_results": [
+    {
+      "id": "0_0_2_85",
+      "label": "Retinoblastoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "tcga_results": [],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/rare/dataset_202_retinoblastoma_histology_rare_20260607_021136.log"
+}

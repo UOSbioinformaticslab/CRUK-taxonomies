@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": "0_0_2_67",
+      "label": "Neuroblastoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

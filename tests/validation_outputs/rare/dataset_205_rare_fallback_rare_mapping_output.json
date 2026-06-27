@@ -1,0 +1,30 @@
+{
+  "input_dataset_file": "dataset_205_rare_fallback.json",
+  "matched_schema_term": "Rare cancer",
+  "matched_rule": "rare_cancer_direct",
+  "number_of_input_filters": 3,
+  "number_of_output_filters": 3,
+  "expected_cruk_labels": [
+    "Rare cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Rare cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "cruk_results": [
+    {
+      "id": "0_0_2_83",
+      "label": "Rare cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "tcga_results": [],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/rare/dataset_205_rare_fallback_rare_20260607_021137.log"
+}

@@ -1,0 +1,28 @@
+{
+  "datasetId": 302,
+  "datasetLabel": "Simple true case - stomach",
+  "scenario": "Topography is covered by the simple schema, so direct CRUK and TCGA mappings should be returned.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c16",
+      "label": "C16 Stomach",
+      "category": "C16 Stomach",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_36",
+      "label": "Gastric cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_30",
+      "label": "STAD (Stomach adenocarcinoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

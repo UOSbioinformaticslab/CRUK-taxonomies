@@ -1,0 +1,18 @@
+{
+  "datasetFilters": [
+    {
+      "id": "icdo_top_201",
+      "label": "C24.1 Ampulla of Vater",
+      "category": "Biliary tract",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_5",
+      "label": "Ampullary cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

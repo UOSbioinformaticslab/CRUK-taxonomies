@@ -1,0 +1,46 @@
+{
+  "input_dataset_file": "dataset_ear_cancer.json",
+  "histology": null,
+  "number_of_input_filters": 2,
+  "number_of_output_filters": 2,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Ear cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Ear cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": false,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_topo_ear_1",
+        "label": "C30.1 Middle ear",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": null,
+      "matched_schema_term": "EAR",
+      "matched_rule": "ear_exact",
+      "cruk_results": [
+        {
+          "id": "0_0_2_30",
+          "label": "Ear cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": []
+    }
+  ],
+  "encountered_problems": [
+    "No histology filter found in datasetFilters."
+  ],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_ear_cancer_complex_20260607_014100.log"
+}

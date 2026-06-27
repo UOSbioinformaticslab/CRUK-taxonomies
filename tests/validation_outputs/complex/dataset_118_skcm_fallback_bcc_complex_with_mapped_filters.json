@@ -1,0 +1,28 @@
+{
+  "datasetId": 118,
+  "datasetLabel": "SKCM fallback - skin topography (C44) with non-melanoma histology (8090/3 basal cell carcinoma)",
+  "scenario": "Basal cell carcinoma (8090/3) of the skin (C44). The topography matches the SKCM rule (C44 Skin) but the histology code is not in the SKCM histology_codes list. For topography_and_histology rules, the fallback should fire when topography matches even if histology does not. Expected output is the SKCM fallback: a broad skin cancer CRUK label with no TCGA term.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c44",
+      "label": "C44 Skin",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8090_3",
+      "label": "8090/3 Basal cell carcinoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_7",
+      "label": "Basal cell skin cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

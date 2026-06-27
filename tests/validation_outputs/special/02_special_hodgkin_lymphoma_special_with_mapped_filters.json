@@ -1,0 +1,32 @@
+{
+  "datasetFilters": [
+    {
+      "id": "test_hist_02",
+      "label": "9650/3 Hodgkin lymphoma, NOS",
+      "category": "icdOHistology",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_42",
+      "label": "Hodgkin lymphoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_53",
+      "label": "Lymphoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_10",
+      "label": "Blood cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

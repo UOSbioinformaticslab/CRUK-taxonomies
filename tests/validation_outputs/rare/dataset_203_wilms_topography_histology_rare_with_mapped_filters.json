@@ -1,0 +1,25 @@
+{
+  "datasetFilters": [
+    {
+      "id": "icdo_top_203",
+      "label": "C64 Kidney",
+      "category": "Kidney",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "hist_203",
+      "label": "8960/3 Nephroblastoma, NOS",
+      "category": "Histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_108",
+      "label": "Wilms tumour",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

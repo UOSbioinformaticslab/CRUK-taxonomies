@@ -1,0 +1,38 @@
+{
+  "topography_labels": [
+    "C40-C41 Bones, joints and articular cartilage"
+  ],
+  "histology_label": null,
+  "existing_cruk_labels": [],
+  "age_range_max": null,
+  "childhood_case_detected": false,
+  "male_case_detected": false,
+  "results": [
+    {
+      "input_term": {
+        "id": null,
+        "label": "C40-C41 Bones, joints and articular cartilage",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "topography_label": "C40-C41 Bones, joints and articular cartilage",
+      "histology_label": null,
+      "matched_level": "umbrella",
+      "matched_schema_term": "C40-C41 Bones, joints and articular cartilage",
+      "matched_rule": null,
+      "CRUK": [
+        {
+          "id": "0_0_2_11",
+          "label": "Bone cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "TCGA": []
+    }
+  ],
+  "unmatched": [],
+  "encountered_problems": []
+}

@@ -1,0 +1,56 @@
+{
+  "input_dataset_file": "dataset_107_laml.json",
+  "histology": "9861/3 Acute myeloid leukemia, NOS",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 4,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Acute myeloid leukaemia (AML)"
+  ],
+  "predicted_cruk_labels": [
+    "Acute myeloid leukaemia (AML)"
+  ],
+  "expected_tcga_labels": [
+    "LAML (Acute Myeloid Leukemia)"
+  ],
+  "predicted_tcga_labels": [
+    "LAML (Acute Myeloid Leukemia)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c42",
+        "label": "C42 Hematopoietic and reticuloendothelial systems",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "9861/3 Acute myeloid leukemia, NOS",
+      "matched_schema_term": "LAML",
+      "matched_rule": "aml_exact",
+      "cruk_results": [
+        {
+          "id": "0_0_2_3",
+          "label": "Acute myeloid leukaemia (AML)",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": [
+        {
+          "id": "0_0_4_15",
+          "label": "LAML (Acute Myeloid Leukemia)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_107_laml_complex_20260607_014100.log"
+}

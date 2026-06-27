@@ -1,0 +1,271 @@
+{
+  "number_of_cases": 8,
+  "passed": 8,
+  "failed": 0,
+  "results": [
+    {
+      "case_name": "simple_bile_duct",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label C24.0 Extrahepatic bile duct --category icdOTopography",
+      "expected": {
+        "matched_level": "simple",
+        "CRUK": [
+          "Bile duct cancer"
+        ],
+        "TCGA": []
+      },
+      "actual": {
+        "matched_level": "simple",
+        "matched_schema_term": "C24.0 Extrahepatic bile duct",
+        "matched_rule": null,
+        "CRUK": [
+          "Bile duct cancer"
+        ],
+        "TCGA": [],
+        "unmatched": [],
+        "encountered_problems": []
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "intermediate_kidney_clear_cell",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label C64 Kidney --category icdOTopography --histology 8310/3 Clear cell adenocarcinoma, NOS",
+      "expected": {
+        "matched_level": "intermediate",
+        "CRUK": [
+          "Kidney cancer"
+        ],
+        "TCGA": [
+          "KIRC (Kidney renal clear cell carcinoma)",
+          "KIRP (Kidney renal papillary cell carcinoma)",
+          "KICH (Kidney Chromophobe)"
+        ]
+      },
+      "actual": {
+        "matched_level": "intermediate",
+        "matched_schema_term": "C64 Kidney",
+        "matched_rule": null,
+        "CRUK": [
+          "Kidney cancer"
+        ],
+        "TCGA": [
+          "KIRC (Kidney renal clear cell carcinoma)",
+          "KIRP (Kidney renal papillary cell carcinoma)",
+          "KICH (Kidney Chromophobe)"
+        ],
+        "unmatched": [],
+        "encountered_problems": []
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "complex_sarcoma_leiomyosarcoma",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label C49 Connective, subcutaneous and other soft tissues --category icdOTopography --histology 8890/3 Leiomyosarcoma, NOS",
+      "expected": {
+        "matched_level": "complex",
+        "CRUK": [
+          "Soft tissue sarcoma"
+        ],
+        "TCGA": [
+          "SARC (Sarcoma)"
+        ]
+      },
+      "actual": {
+        "matched_level": "complex",
+        "matched_schema_term": "SARC",
+        "matched_rule": "leiomyosarcoma",
+        "CRUK": [
+          "Soft tissue sarcoma"
+        ],
+        "TCGA": [
+          "SARC (Sarcoma)"
+        ],
+        "unmatched": [],
+        "encountered_problems": []
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "rare_c47",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label C47 Peripheral nerves and autonomic nervous system --category icdOTopography",
+      "expected": {
+        "matched_level": "rare",
+        "CRUK": [
+          "Rare cancer"
+        ],
+        "TCGA": []
+      },
+      "actual": {
+        "matched_level": "rare",
+        "matched_schema_term": "Rare cancer",
+        "matched_rule": "rare_cancer_fallback",
+        "CRUK": [
+          "Rare cancer"
+        ],
+        "TCGA": [],
+        "unmatched": [],
+        "encountered_problems": [
+          "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+        ]
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "special_mens_cancer",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label Men's cancer --category crukTerms",
+      "expected": {
+        "matched_level": "special",
+        "CRUK": [
+          "Men's cancer"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ]
+      },
+      "actual": {
+        "matched_level": "special",
+        "matched_schema_term": "Men's cancer",
+        "matched_rule": "mens_cancer",
+        "CRUK": [
+          "Men's cancer"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ],
+        "unmatched": [],
+        "encountered_problems": [
+          "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+        ]
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "special_breast_cancer_in_men",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label Breast cancer in men --category crukTerms",
+      "expected": {
+        "matched_level": "special",
+        "CRUK": [
+          "Breast cancer in men",
+          "Men's cancer"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ]
+      },
+      "actual": {
+        "matched_level": "special",
+        "matched_schema_term": "Breast cancer in men, Men's cancer",
+        "matched_rule": "breast_cancer_in_men",
+        "CRUK": [
+          "Breast cancer in men",
+          "Men's cancer"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ],
+        "unmatched": [],
+        "encountered_problems": [
+          "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+        ]
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "special_childrens_cancers",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label Children's cancers --category crukTerms --age-range-max 15",
+      "expected": {
+        "matched_level": "special",
+        "CRUK": [
+          "Children's cancers"
+        ],
+        "TCGA": []
+      },
+      "actual": {
+        "matched_level": "special",
+        "matched_schema_term": "Children's cancers",
+        "matched_rule": "childrens_cancers",
+        "CRUK": [
+          "Children's cancers"
+        ],
+        "TCGA": [],
+        "unmatched": [],
+        "encountered_problems": [
+          "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+        ]
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    },
+    {
+      "case_name": "special_all_in_children",
+      "passed": true,
+      "command": "python3 /Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/python_helpers/runner.py --label Acute lymphoblastic leukaemia (ALL) in children --category crukTerms --age-range-max 15",
+      "expected": {
+        "matched_level": "special",
+        "CRUK": [
+          "Acute lymphoblastic leukaemia (ALL) in children",
+          "Children's cancers",
+          "Blood cancers"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ]
+      },
+      "actual": {
+        "matched_level": "special",
+        "matched_schema_term": "Acute lymphoblastic leukaemia (ALL) in children, Children's cancers, Blood cancers",
+        "matched_rule": "acute_lymphoblastic_leukaemia_all_in_children",
+        "CRUK": [
+          "Acute lymphoblastic leukaemia (ALL) in children",
+          "Children's cancers",
+          "Blood cancers"
+        ],
+        "TCGA": [
+          "MISC (Miscellaneous)"
+        ],
+        "unmatched": [],
+        "encountered_problems": [
+          "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+        ]
+      },
+      "checks": {
+        "level_match": true,
+        "cruk_match": true,
+        "tcga_match": true
+      }
+    }
+  ]
+}

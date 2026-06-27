@@ -1,0 +1,56 @@
+{
+  "input_dataset_file": "dataset_104_hnsc_larynx.json",
+  "histology": "8070/3 Squamous cell carcinoma, NOS",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 4,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Head and neck cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Head and neck cancer"
+  ],
+  "expected_tcga_labels": [
+    "HNSC (Head and Neck squamous cell carcinoma)"
+  ],
+  "predicted_tcga_labels": [
+    "HNSC (Head and Neck squamous cell carcinoma)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c32",
+        "label": "C32 Larynx",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8070/3 Squamous cell carcinoma, NOS",
+      "matched_schema_term": "HNSC",
+      "matched_rule": "head_neck_squamous",
+      "cruk_results": [
+        {
+          "id": "0_0_2_41",
+          "label": "Head and neck cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": [
+        {
+          "id": "0_0_4_11",
+          "label": "HNSC (Head and Neck squamous cell carcinoma)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_104_hnsc_larynx_complex_20260607_014100.log"
+}

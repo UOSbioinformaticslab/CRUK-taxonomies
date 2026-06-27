@@ -1,0 +1,44 @@
+{
+  "input_dataset_file": "dataset_upper_urinary_urothelial.json",
+  "histology": "8120/3 Transitional cell carcinoma, NOS",
+  "number_of_input_filters": 3,
+  "number_of_output_filters": 3,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Upper urinary tract urothelial cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Upper urinary tract urothelial cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_topo_uro_1",
+        "label": "C65 Renal pelvis",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8120/3 Transitional cell carcinoma, NOS",
+      "matched_schema_term": "UPPER_URINARY_TRACT_UROTHELIAL",
+      "matched_rule": "upper_urinary_urothelial",
+      "cruk_results": [
+        {
+          "id": "0_0_2_104",
+          "label": "Upper urinary tract urothelial cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": []
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_upper_urinary_urothelial_complex_20260607_014100.log"
+}

@@ -1,0 +1,68 @@
+{
+  "input": {
+    "cruk_label": null,
+    "topography_label": "C17 Small intestine",
+    "histology_label": "8240/3 Neuroendocrine tumor, NOS"
+  },
+  "matched_rule_names": [
+    "small_bowel_nets",
+    "small_intestine_general"
+  ],
+  "return_cruk_labels": [
+    "Small bowel neuroendocrine tumours (NETs)",
+    "Small bowel cancer",
+    "Bowel cancer",
+    "Colorectal cancer"
+  ],
+  "return_tcga_labels": [],
+  "expected_cruk_labels": [],
+  "predicted_cruk_labels": [
+    "Small bowel neuroendocrine tumours (NETs)",
+    "Small bowel cancer",
+    "Bowel cancer",
+    "Colorectal cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": false,
+  "tcga_label_match": true,
+  "passed": false,
+  "missing_labels_in_label_key_dict": [],
+  "missing_labels_in_filter_data": [],
+  "added_cruk_filters": [
+    {
+      "id": "0_0_2_91",
+      "label": "Small bowel neuroendocrine tumours (NETs)",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_90",
+      "label": "Small bowel cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_12",
+      "label": "Bowel cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_29",
+      "label": "Colorectal cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "added_tcga_filters": [],
+  "number_of_added_cruk_filters": 4,
+  "number_of_added_tcga_filters": 0,
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/special/01_special_small_bowel_net_special_20260607_014444.log",
+  "input_dataset_file": "01_special_small_bowel_net.json"
+}

@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": "bad_01",
+      "label": "8240/3 Neuroendocrine tumor, NOS",
+      "category": "wrongCategory",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    }
+  ]
+}

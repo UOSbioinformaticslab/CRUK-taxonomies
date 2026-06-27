@@ -1,0 +1,56 @@
+{
+  "input_dataset_file": "dataset_101_skin_melanoma.json",
+  "histology": "8720/3 Malignant melanoma, NOS",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 4,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Melanoma skin cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Melanoma skin cancer"
+  ],
+  "expected_tcga_labels": [
+    "SKCM (Skin Cutaneous Melanoma)"
+  ],
+  "predicted_tcga_labels": [
+    "SKCM (Skin Cutaneous Melanoma)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c44",
+        "label": "C44 Skin",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8720/3 Malignant melanoma, NOS",
+      "matched_schema_term": "SKCM",
+      "matched_rule": "skin_melanoma",
+      "cruk_results": [
+        {
+          "id": "0_0_2_56",
+          "label": "Melanoma skin cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "tcga_results": [
+        {
+          "id": "0_0_4_29",
+          "label": "SKCM (Skin Cutaneous Melanoma)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/complex/dataset_101_skin_melanoma_complex_20260607_014007.log"
+}

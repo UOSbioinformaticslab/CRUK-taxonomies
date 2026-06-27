@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": null,
+      "label": "C71 Brain",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

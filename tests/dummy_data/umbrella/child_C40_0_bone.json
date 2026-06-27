@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": null,
+      "label": "C40.0 Long bones of upper limb, scapula and associated joints",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

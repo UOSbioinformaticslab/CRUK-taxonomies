@@ -1,0 +1,46 @@
+{
+  "datasetFilters": [
+    {
+      "id": "0_0_0_x",
+      "label": "C17 Small intestine",
+      "category": "icdOTopography",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    },
+    {
+      "id": "0_0_1_x",
+      "label": "8240/3 Neuroendocrine tumor, NOS",
+      "category": "icdOHistology",
+      "primaryGroup": "ICD-O",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_91",
+      "label": "Small bowel neuroendocrine tumours (NETs)",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_90",
+      "label": "Small bowel cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_12",
+      "label": "Bowel cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_29",
+      "label": "Colorectal cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

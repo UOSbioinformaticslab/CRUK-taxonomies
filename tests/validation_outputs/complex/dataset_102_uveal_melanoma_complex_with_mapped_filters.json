@@ -1,0 +1,35 @@
+{
+  "datasetId": 102,
+  "datasetLabel": "Uveal melanoma - UVM",
+  "scenario": "Melanoma arising in the eye (C69). Same histology code as SKCM (8720/3) but different topography. Should match UVM via topography_and_histology rule, not SKCM. This is the core SKCM vs UVM disambiguation test.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c69",
+      "label": "C69 Eye and adnexa",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8720_3",
+      "label": "8720/3 Malignant melanoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_33",
+      "label": "Eye cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_36",
+      "label": "UVM (Uveal Melanoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

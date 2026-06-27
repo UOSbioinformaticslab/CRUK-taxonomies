@@ -1,0 +1,34 @@
+{
+  "datasetId": "dataset_301_vulval_cancer",
+  "datasetName": "Dummy dataset for vulval cancer special mapping",
+  "datasetFilters": [
+    {
+      "id": "test_topography_301",
+      "label": "C51 Vulva",
+      "category": "icdOTopography",
+      "primaryGroup": "icdo",
+      "description": ""
+    },
+    {
+      "id": "test_histology_301",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "category": "icdOHistology",
+      "primaryGroup": "icdo",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_110",
+      "label": "Women's cancers (gynaecological cancer)",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_107",
+      "label": "Vulval cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "datasetId": 122,
+  "datasetLabel": "Melanoma with unresolvable topography - no match expected",
+  "scenario": "Malignant melanoma (8720/3) with a topography that does not match any schema rule (C50 Breast). The histology code 8720/3 appears in both SKCM and UVM rules, but neither rule's topography condition is met. No fallback should fire because for topography_and_histology rules the fallback trigger is topography-based, not histology-based, and C50 does not match C44 or C69. Empty output is expected.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c50",
+      "label": "C50 Breast",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8720_3",
+      "label": "8720/3 Malignant melanoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

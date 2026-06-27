@@ -1,0 +1,35 @@
+{
+  "datasetId": 107,
+  "datasetLabel": "Acute myeloid leukaemia - LAML (histology-driven)",
+  "scenario": "AML (9861/3) with a haematopoietic topography (C42). Tests that a histology_exact rule matches regardless of topography. The topography value here is realistic but should be completely ignored by the matching logic.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c42",
+      "label": "C42 Hematopoietic and reticuloendothelial systems",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_9861_3",
+      "label": "9861/3 Acute myeloid leukemia, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_3",
+      "label": "Acute myeloid leukaemia (AML)",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_15",
+      "label": "LAML (Acute Myeloid Leukemia)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

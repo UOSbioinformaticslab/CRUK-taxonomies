@@ -1,0 +1,28 @@
+{
+  "datasetId": 114,
+  "datasetLabel": "Pheochromocytoma - PCPG (adrenal C74, 8700/3)",
+  "scenario": "Pheochromocytoma (8700/3) of the adrenal gland (C74). Tests the adrenal variant of the PCPG histology_exact rule. Topography C74 is realistic but must be ignored by the matching logic.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c74",
+      "label": "C74 Adrenal gland",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8700_3",
+      "label": "8700/3 Pheochromocytoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_102",
+      "label": "Tumours of the adrenal gland",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

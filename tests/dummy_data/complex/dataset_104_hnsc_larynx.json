@@ -1,0 +1,35 @@
+{
+    "datasetId": 104,
+    "datasetLabel": "Head and neck squamous cell carcinoma - HNSC (larynx, discrete code C32)",
+    "scenario": "Squamous cell carcinoma of the larynx (C32). Tests the discrete C32 entry in the HNSC topography_codes list, which is separate from the C00-C14 range. Verifies that non-range exact codes within topography_group_and_histology are matched correctly.",
+    "datasetFilters": [
+    {
+        "id": "test_icdo_c32",
+        "label": "C32 Larynx",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+    },
+    {
+        "id": "test_histology_8070_3",
+        "label": "8070/3 Squamous cell carcinoma, NOS",
+        "category": "histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+    },
+    {
+        "id": "expected_cruk_hnsc",
+        "label": "Head and neck cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+    },
+    {
+        "id": "expected_tcga_hnsc",
+        "label": "HNSC (Head and Neck squamous cell carcinoma)",
+        "category": "cancerTypes",
+        "primaryGroup": "cancer-type",
+        "description": ""
+    }
+    ]
+}

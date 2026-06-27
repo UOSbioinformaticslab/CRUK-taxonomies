@@ -1,0 +1,62 @@
+[
+  {
+    "input_file": "umbrella_C69_C72.json",
+    "label": "C69-C72 Eye, brain and other parts of central nervous system",
+    "expected_matched_level": "umbrella",
+    "actual_matched_level": "umbrella",
+    "expected_cruk": [
+      "Eye cancer",
+      "Brain tumours",
+      "Spinal cord tumours"
+    ],
+    "actual_cruk": [
+      "Eye cancer",
+      "Brain tumours",
+      "Spinal cord tumours"
+    ],
+    "status": "PASS",
+    "output_file": "tests/validation_outputs/umbrella/umbrella_C69_C72_output.json"
+  },
+  {
+    "input_file": "child_C71_brain.json",
+    "label": "C71 Brain",
+    "expected_matched_level": "intermediate",
+    "actual_matched_level": "intermediate",
+    "expected_cruk": [
+      "Brain tumours"
+    ],
+    "actual_cruk": [
+      "Brain tumours"
+    ],
+    "status": "PASS",
+    "output_file": "tests/validation_outputs/umbrella/child_C71_brain_output.json"
+  },
+  {
+    "input_file": "umbrella_C40_C41.json",
+    "label": "C40-C41 Bones, joints and articular cartilage",
+    "expected_matched_level": "umbrella",
+    "actual_matched_level": "umbrella",
+    "expected_cruk": [
+      "Bone cancer"
+    ],
+    "actual_cruk": [
+      "Bone cancer"
+    ],
+    "status": "PASS",
+    "output_file": "tests/validation_outputs/umbrella/umbrella_C40_C41_output.json"
+  },
+  {
+    "input_file": "child_C40_0_bone.json",
+    "label": "C40.0 Long bones of upper limb, scapula and associated joints",
+    "expected_matched_level": "complex",
+    "actual_matched_level": "complex",
+    "expected_cruk": [
+      "Bone cancer"
+    ],
+    "actual_cruk": [
+      "Bone cancer"
+    ],
+    "status": "PASS",
+    "output_file": "tests/validation_outputs/umbrella/child_C40_0_bone_output.json"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "datasetFilters": [
+    {
+      "id": "0_0_2_2",
+      "label": "Acute lymphoblastic leukaemia (ALL) in children",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_24",
+      "label": "Children's cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_10",
+      "label": "Blood cancers",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_22",
+      "label": "MISC (Miscellaneous)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

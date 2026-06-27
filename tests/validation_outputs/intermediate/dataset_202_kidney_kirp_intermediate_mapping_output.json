@@ -1,0 +1,55 @@
+{
+  "input_dataset_file": "dataset_202_kidney_kirp.json",
+  "histology": "8260/3 Papillary adenocarcinoma, NOS",
+  "number_of_input_filters": 4,
+  "number_of_output_filters": 4,
+  "number_of_icdo_terms": 1,
+  "expected_cruk_labels": [
+    "Kidney cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Kidney cancer"
+  ],
+  "expected_tcga_labels": [
+    "KIRP (Kidney renal papillary cell carcinoma)"
+  ],
+  "predicted_tcga_labels": [
+    "KIRP (Kidney renal papillary cell carcinoma)"
+  ],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "results": [
+    {
+      "input_term": {
+        "id": "test_icdo_c64",
+        "label": "C64 Kidney",
+        "category": "C64-C68 Urinary tract",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "histology": "8260/3 Papillary adenocarcinoma, NOS",
+      "matched_schema_term": "C64 Kidney",
+      "CRUK": [
+        {
+          "id": "0_0_2_46",
+          "label": "Kidney cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "TCGA": [
+        {
+          "id": "0_0_4_14",
+          "label": "KIRP (Kidney renal papillary cell carcinoma)",
+          "category": "cancerTypes",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/intermediate/dataset_202_kidney_kirp_intermediate_20260606_210518.log"
+}

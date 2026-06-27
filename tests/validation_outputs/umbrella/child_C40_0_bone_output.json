@@ -1,0 +1,40 @@
+{
+  "topography_labels": [
+    "C40.0 Long bones of upper limb, scapula and associated joints"
+  ],
+  "histology_label": null,
+  "existing_cruk_labels": [],
+  "age_range_max": null,
+  "childhood_case_detected": false,
+  "male_case_detected": false,
+  "results": [
+    {
+      "input_term": {
+        "id": null,
+        "label": "C40.0 Long bones of upper limb, scapula and associated joints",
+        "category": "icdOTopography",
+        "primaryGroup": "cancer-type",
+        "description": ""
+      },
+      "topography_label": "C40.0 Long bones of upper limb, scapula and associated joints",
+      "histology_label": null,
+      "matched_level": "complex",
+      "matched_schema_term": "BONE",
+      "matched_rule": "bone_group",
+      "CRUK": [
+        {
+          "id": "0_0_2_11",
+          "label": "Bone cancer",
+          "category": "crukTerms",
+          "primaryGroup": "cancer-type",
+          "description": ""
+        }
+      ],
+      "TCGA": []
+    }
+  ],
+  "unmatched": [],
+  "encountered_problems": [
+    "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+  ]
+}

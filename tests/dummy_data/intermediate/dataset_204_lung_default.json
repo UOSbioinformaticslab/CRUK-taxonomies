@@ -1,0 +1,43 @@
+    {
+    "datasetId": 204,
+    "datasetLabel": "Lung default fallback case",
+    "scenario": "Histology does not match any lung override, so the intermediate mapping falls back to the default TCGA labels.",
+
+    "datasetFilters": [
+        {
+        "id": "test_icdo_c34",
+        "label": "C34 Bronchus and lung",
+        "category": "C30-C39 Respiratory and intrathoracic organs",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "test_histology_8000_3",
+        "label": "8000/3 Neoplasm, malignant",
+        "category": "histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_cruk",
+        "label": "Lung cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_tcga_a",
+        "label": "LUAD (Lung adenocarcinoma)",
+        "category": "cancerTypes",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_tcga_b",
+        "label": "LUSC (Lung squamous cell carcinoma)",
+        "category": "cancerTypes",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }

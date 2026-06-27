@@ -1,0 +1,90 @@
+    [
+    {
+        "case_name": "simple_bile_duct",
+        "label": "C24.0 Extrahepatic bile duct",
+        "histology": null,
+        "category": "icdOTopography",
+        "age_range_max": null,
+        "expected_level": "simple",
+        "expected_cruk": ["Bile duct cancer"],
+        "expected_tcga": []
+    },
+    {
+        "case_name": "intermediate_kidney_clear_cell",
+        "label": "C64 Kidney",
+        "histology": "8310/3 Clear cell adenocarcinoma, NOS",
+        "category": "icdOTopography",
+        "age_range_max": null,
+        "expected_level": "intermediate",
+        "expected_cruk": ["Kidney cancer"],
+        "expected_tcga": [
+        "KIRC (Kidney renal clear cell carcinoma)",
+        "KIRP (Kidney renal papillary cell carcinoma)",
+        "KICH (Kidney Chromophobe)"
+        ]
+    },
+    {
+        "case_name": "complex_sarcoma_leiomyosarcoma",
+        "label": "C49 Connective, subcutaneous and other soft tissues",
+        "histology": "8890/3 Leiomyosarcoma, NOS",
+        "category": "icdOTopography",
+        "age_range_max": null,
+        "expected_level": "complex",
+        "expected_cruk": ["Soft tissue sarcoma"],
+        "expected_tcga": ["SARC (Sarcoma)"]
+    },
+    {
+        "case_name": "rare_c47",
+        "label": "C47 Peripheral nerves and autonomic nervous system",
+        "histology": null,
+        "category": "icdOTopography",
+        "age_range_max": null,
+        "expected_level": "rare",
+        "expected_cruk": ["Rare cancer"],
+        "expected_tcga": []
+    },
+    {
+        "case_name": "special_mens_cancer",
+        "label": "Men's cancer",
+        "histology": null,
+        "category": "crukTerms",
+        "age_range_max": null,
+        "expected_level": "special",
+        "expected_cruk": ["Men's cancer"],
+        "expected_tcga": ["MISC (Miscellaneous)"]
+    },
+    {
+        "case_name": "special_breast_cancer_in_men",
+        "label": "Breast cancer in men",
+        "histology": null,
+        "category": "crukTerms",
+        "age_range_max": null,
+        "expected_level": "special",
+        "expected_cruk": ["Breast cancer in men", "Men's cancer"],
+        "expected_tcga": ["MISC (Miscellaneous)"]
+    },
+    {
+        "case_name": "special_childrens_cancers",
+        "label": "Children's cancers",
+        "histology": null,
+        "category": "crukTerms",
+        "age_range_max": 15,
+        "expected_level": "special",
+        "expected_cruk": ["Children's cancers"],
+        "expected_tcga": []
+    },
+    {
+        "case_name": "special_all_in_children",
+        "label": "Acute lymphoblastic leukaemia (ALL) in children",
+        "histology": null,
+        "category": "crukTerms",
+        "age_range_max": 15,
+        "expected_level": "special",
+        "expected_cruk": [
+        "Acute lymphoblastic leukaemia (ALL) in children",
+        "Children's cancers",
+        "Blood cancers"
+        ],
+        "expected_tcga": ["MISC (Miscellaneous)"]
+    }
+]

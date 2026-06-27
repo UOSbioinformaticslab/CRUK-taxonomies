@@ -1,0 +1,35 @@
+{
+  "datasetId": 116,
+  "datasetLabel": "Cholangiocarcinoma - CHOL (intrahepatic C22, 8160/3)",
+  "scenario": "Intrahepatic cholangiocarcinoma (8160/3) at C22 (liver and intrahepatic bile ducts). Tests the CHOL histology_exact rule at the intrahepatic site. Topography C22 must be ignored by the rule even though it is the clinically expected site.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c22",
+      "label": "C22 Liver and intrahepatic bile ducts",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8160_3",
+      "label": "8160/3 Cholangiocarcinoma",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_25",
+      "label": "Cholangiocarcinoma",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_4",
+      "label": "CHOL (Cholangiocarcinoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

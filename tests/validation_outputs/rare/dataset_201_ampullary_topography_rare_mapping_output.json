@@ -1,0 +1,30 @@
+{
+  "input_dataset_file": "dataset_201_ampullary_topography.json",
+  "matched_schema_term": "Ampullary cancer",
+  "matched_rule": "ampullary_cancer_by_topography",
+  "number_of_input_filters": 2,
+  "number_of_output_filters": 2,
+  "expected_cruk_labels": [
+    "Ampullary cancer"
+  ],
+  "predicted_cruk_labels": [
+    "Ampullary cancer"
+  ],
+  "expected_tcga_labels": [],
+  "predicted_tcga_labels": [],
+  "cruk_label_match": true,
+  "tcga_label_match": true,
+  "passed": true,
+  "cruk_results": [
+    {
+      "id": "0_0_2_5",
+      "label": "Ampullary cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ],
+  "tcga_results": [],
+  "encountered_problems": [],
+  "log_file": "/Users/alanoudbensalloom/Desktop/GitHub+VS code /ICDO_TCGA_CRUK_mapping/logs/rare/dataset_201_ampullary_topography_rare_20260607_021136.log"
+}

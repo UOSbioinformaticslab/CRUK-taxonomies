@@ -1,0 +1,35 @@
+{
+  "datasetId": 103,
+  "datasetLabel": "Head and neck squamous cell carcinoma - HNSC (lip, lower range boundary)",
+  "scenario": "Squamous cell carcinoma of the lip (C00). Tests the lower boundary of the C00-C14 topography group range used in the HNSC topography_group_and_histology rule.",
+  "datasetFilters": [
+    {
+      "id": "test_icdo_c00",
+      "label": "C00 Lip",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "test_histology_8070_3",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "category": "histology",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_41",
+      "label": "Head and neck cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_4_11",
+      "label": "HNSC (Head and Neck squamous cell carcinoma)",
+      "category": "cancerTypes",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

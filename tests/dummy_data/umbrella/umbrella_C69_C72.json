@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": null,
+      "label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

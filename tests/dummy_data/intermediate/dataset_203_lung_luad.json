@@ -1,0 +1,36 @@
+    {
+    "datasetId": 203,
+    "datasetLabel": "Lung LUAD override case",
+    "scenario": "Histology matches the lung adenocarcinoma override, so LUAD should be returned.",
+
+    "datasetFilters": [
+        {
+        "id": "test_icdo_c34",
+        "label": "C34 Bronchus and lung",
+        "category": "C30-C39 Respiratory and intrathoracic organs",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "test_histology_8140_3",
+        "label": "8140/3 Adenocarcinoma, NOS",
+        "category": "histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_cruk",
+        "label": "Lung cancer",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "expected_tcga",
+        "label": "LUAD (Lung adenocarcinoma)",
+        "category": "cancerTypes",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }

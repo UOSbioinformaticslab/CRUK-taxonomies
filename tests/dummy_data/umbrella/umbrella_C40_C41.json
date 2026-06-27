@@ -1,0 +1,11 @@
+{
+  "datasetFilters": [
+    {
+      "id": null,
+      "label": "C40-C41 Bones, joints and articular cartilage",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

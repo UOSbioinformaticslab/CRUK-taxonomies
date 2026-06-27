@@ -1,0 +1,18 @@
+{
+  "datasetFilters": [
+    {
+      "id": "test_topo_ear_1",
+      "label": "C30.1 Middle ear",
+      "category": "icdOTopography",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    },
+    {
+      "id": "0_0_2_30",
+      "label": "Ear cancer",
+      "category": "crukTerms",
+      "primaryGroup": "cancer-type",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+    {
+    "datasetFilters": [
+        {
+        "id": "hist_202",
+        "label": "9510/3 Retinoblastoma, NOS",
+        "category": "Histology",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        },
+        {
+        "id": "0_0_2_85",
+        "label": "Retinoblastoma",
+        "category": "crukTerms",
+        "primaryGroup": "cancer-type",
+        "description": ""
+        }
+    ]
+    }
