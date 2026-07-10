@@ -1,20 +1,59 @@
 # CRUK Taxonomies ICD-O Mapping
+
 This repository contains a rule-based mapping workflow for classifying ICD-O topography and histology inputs into CRUK cancer terms and, where appropriate, TCGA project labels.
 
 ## Overview
+
 The workflow takes ICD-O topography and histology filter objects as input, applies a sequence of schema-based mapping rules, and returns generated CRUK and TCGA filter objects in the structure expected by the CRUK Data Hub website.
 
 It was developed to support consistent cancer-type filtering in the CRUK Data Hub and reduce the need for manual lookup when ICD-O code combinations are used.
 
-This repository also includes supplementary SNOMED CT to ICD-O mapping work in the `snomed_icdo_mapping/` folder. This work is separate from the main ICD-O to CRUK/TCGA mapping pipeline.
+This repository also includes supplementary SNOMED CT to ICD-O mapping work, located in `snomed_icdo_mapping/`. This work is separate from the main ICD-O to CRUK/TCGA mapping pipeline. See [Supplementary SNOMED CT to ICD-O workflow](#supplementary-snomed-ct-to-icd-o-workflow) for details, including source material and licensing.
 
+## Reproducibility and running the code
+
+No external Python dependencies are required to run the core mapping scripts in `programs/`, including `runner.py` and `generate_results_dictionary.py`. These scripts use only Python standard library modules.
+
+The main mapping pipeline is run using:
+
+```text
+programs/runner.py
+```
+
+To check how to run the mapping pipeline, use:
+
+```bash
+python3 programs/runner.py --help
+```
+
+See [Running the mapper](#running-the-mapper) below for a worked example.
+
+### Generating `results_dictionary.json`
+
+The script used to generate `results_dictionary.json` is:
+
+```text
+programs/generate_results_dictionary.py
+```
+
+This script extracts ICD-O topography and histology labels from `label_key_dict.json`, runs the mapping pipeline across each topography–histology combination, and saves the generated outputs as `results_dictionary.json`.
+
+The `results_dictionary.json` file is included. To generate a new version, run:
+
+```bash
+python3 programs/generate_results_dictionary.py --output results_dictionary.json
+```
+
+The full dictionary generation may take some time, as it iterates across all extracted ICD-O topography and histology combinations.
 
 ## Repository structure
+
 ```text
 .
 ├── README.md
 ├── programs/
 │   ├── runner.py
+│   ├── generate_results_dictionary.py
 │   ├── mapping_utils.py
 │   ├── mapping_program_umbrella.py
 │   ├── mapping_program_simple.py
@@ -46,18 +85,22 @@ This repository also includes supplementary SNOMED CT to ICD-O mapping work in t
 │   └── README.md
 │
 ├── label_key_dict.json
-└── longer_filter_data.json
+├── longer_filter_data.json
+└── results_dictionary.json
 ```
 
 ## How the schemas and programs work together
+
 The JSON schema files define the mapping rules. Each `mapping_program_*.py` file implements the matching logic for its corresponding schema.
 
 For example, `schemas/schema_complex_1.1.2.json` contains complex site-histology rules, and `programs/mapping_program_complex.py` applies those rules during the mapping workflow.
 
 The `programs/runner.py` script coordinates the mapping programs and applies them in sequence.
 
+The `programs/generate_results_dictionary.py` script runs the mapping pipeline repeatedly across extracted ICD-O topography and histology labels to produce `results_dictionary.json`.
 
 ## Main input files
+
 ### `label_key_dict.json`
 
 Maps filter labels to their corresponding CRUK Data Hub filter IDs.
@@ -74,8 +117,8 @@ Contains the full filter objects used by the CRUK Data Hub, including:
 
 These files allow the mapper to return full Data Hub filter objects, including CRUK and TCGA outputs where applicable, rather than label text only.
 
-
 ## Mapping schemas
+
 The workflow is split into several schema levels. Each schema handles a different type of mapping case.
 
 ### Umbrella schema
@@ -121,14 +164,33 @@ Melanoma histology + skin topography
 
 ### Special schema
 
-Handles special CRUK hierarchy or metadata-related logic, such as children's cancers and men's cancers.
+Handles special CRUK hierarchy, one-to-many outputs, parent-child return logic, and metadata-related labels.
+
+Examples include returning both a specific child cancer term and its broader parent category where appropriate, or adding metadata-related CRUK terms such as children's cancers, men's cancers, or breast cancer in men.
+
+Example:
+
+```text
+Breast cancer in men
+→ Breast cancer in men
+→ Men's cancer
+```
 
 ### Rare schema
 
-Handles rare primary sites and rare cancer fallback cases where no more specific schema rule applies.
+Handles rare cancer mappings based on topography, histology, direct CRUK label rules, and fallback logic.
 
+These rules are used for rare primary sites, rare histology-driven cancers, and cases where no more specific umbrella, intermediate, complex, special, or simple schema rule applies.
+
+Example:
+
+```text
+9540/3 Malignant schwannoma
+→ Malignant schwannoma
+```
 
 ## Mapping order
+
 The runner applies the mapping programs in the following order:
 
 ```text
@@ -137,8 +199,8 @@ umbrella → intermediate → complex → special → simple → rare
 
 The workflow stops once a suitable match is found. The umbrella rules are only used for direct umbrella-level inputs, while more specific site-histology rules are checked before broader simple and rare fallback mappings.
 
-
 ## Output format
+
 The runner response can include:
 
 * `topography_labels`
@@ -170,6 +232,7 @@ Generated filter objects may also include:
 This indicates that the filter was added automatically by the mapping workflow rather than manually selected by the user on the website.
 
 ### Example output
+
 ```text
 Input:
 C77.9 Lymph node, NOS
@@ -181,21 +244,45 @@ TCGA: none
 childhood_case_detected: true
 existing_cruk_labels: Children's cancers
 ```
-
 ## Running the mapper
+
 Run the mapper from the repository root folder.
 
-Example command:
+To see the available command-line options, run:
+
+```bash
+python3 programs/runner.py --help
+```
+
+The only required command-line argument is `--label`. Optional arguments include `--category`, `--histology`, `--existing-cruk-label`, `--age-range-max`, and `--output`.
+
+The mapper can be run using an input label alone, or using an input label together with a histology label. The runner then applies the relevant schema rules automatically.
+
+### Running with an input label only
+
+Use `--label` when the input is a single ICD-O topography label:
+
 ```bash
 python3 programs/runner.py \
-  --label "C77.9 Lymph node, NOS" \
-  --histology "9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood" \
-  --age-range-max 15
+  --label "C50 Breast"
 ```
-The runner response records the matched schema level, generated CRUK terms, generated TCGA labels, and any metadata flags detected during mapping.
 
+### Running with an input label and histology
+
+Use `--label` together with `--histology` when both ICD-O topography and histology information are available:
+
+```bash
+python3 programs/runner.py \
+  --label "C64 Kidney" \
+  --histology "8310/3 Clear cell adenocarcinoma, NOS"
+```
+
+Optional arguments, such as `--category`, `--existing-cruk-label`, `--age-range-max`, and `--output`, can be added when required.
+
+The runner response records the matched schema level, generated CRUK terms, generated TCGA labels, unmatched terms, encountered problems, and any metadata flags detected during mapping.
 
 ## Validation
+
 Validation files are stored in the `tests/` folder.
 
 ```text
@@ -231,40 +318,43 @@ Validation covers:
 * childhood age-range validation
 * website output checks using saved JSON files
 
-
 ## Supplementary SNOMED CT to ICD-O workflow
-The `snomed_icdo_mapping/` folder contains supplementary exploratory work linking SNOMED CT descriptors and concept codes to ICD-O codes.
 
-The main annotated output is stored in `snomed_icdo_mapping/03_annotated/` and links:
+The `snomed_icdo_mapping/` folder contains supplementary exploratory work linking SNOMED CT descriptors and concept codes to ICD-O codes. This work is separate from the main ICD-O to CRUK/TCGA mapping pipeline.
+
+The SNOMED CT to ICD-O work was generated from SNOMED CT RF2 release files obtained via NHS TRUD. The main source file was the RF2 Simple Map Snapshot file, which contains SNOMED CT concept-to-ICD-O map entries. The RF2 English Description Snapshot file was then used to attach readable SNOMED CT descriptors to the mapped SNOMED concept codes.
+
+The files included in `snomed_icdo_mapping/` are processed outputs derived from these source files. The main annotated output is stored in `snomed_icdo_mapping/03_annotated/` and includes:
 
 * SNOMED descriptors
 * SNOMED concept codes
 * ICD-O codes
-* ICD-O code type
+* ICD-O code type classification
 
-The ICD-O codes are classified as either:
+The ICD-O codes are classified as either topography codes or morphology/histology codes.
 
-* topography codes
-* morphology/histology codes
+Raw SNOMED CT release files are not included in this repository because SNOMED CT is subject to licensing restrictions. Users should obtain the original SNOMED CT release files directly from the official TRUD source if they need to reproduce this part of the work.
 
-This SNOMED work is separate from the main ICD-O to CRUK/TCGA mapping workflow. Raw SNOMED CT source or release files are not included in this repository.
 Further details are provided in `snomed_icdo_mapping/README.md`.
 
-
 ## Website integration
+
 The mapping workflow is used by the CRUK Data Hub website to generate additional CRUK and TCGA filter objects from ICD-O inputs.
 
 The website sends selected ICD-O topography and histology filters to the backend mapping endpoint, and the mapper returns CRUK and TCGA filters in the same structure used by the Data Hub filter system.
 
-
 ## Generated outputs
-The repository includes `results_dictionary.json`, a large generated output file stored using Git LFS.
 
-This file contains generated mapping outputs across ICD-O topography and histology combinations and is included for review rather than manual editing.
+The repository includes `results_dictionary.json`, a large generated output file stored using Git LFS. It contains generated mapping outputs across ICD-O topography and histology combinations and is included for review rather than manual editing.
 
 Because this file is large, GitHub may not display its contents directly in the browser. It can be downloaded through GitHub or pulled using Git LFS.
 
-## Notes and limitations
-Some mappings are intentionally conservative. Where a TCGA project cannot be assigned confidently, the workflow may return a CRUK term without a TCGA label.
+To generate a new version of this file, see [Generating `results_dictionary.json`](#generating-results_dictionaryjson).
 
-Some broad topography-only mappings are documented separately in the validation notes to distinguish expected behaviour from cases requiring future review.
+## Notes and limitations
+
+The runner order is based on the testing completed so far. It changed during development, for example when intermediate rules were placed before simple rules. Future validation may show if the order needs further changes.
+
+In some cases, the workflow returns a CRUK term without a TCGA label when the correct TCGA project is not clear.
+
+Validation notes are used to document expected behaviour, edge cases, and cases that may need future review.
