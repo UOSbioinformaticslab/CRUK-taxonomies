@@ -254,8 +254,9 @@ class SimpleMappingStrategy(MappingStrategy):
         super().__init__("simple", shared_data)
 
     def map_term(self, term: Dict[str, Any], context: Dict[str, Any]) -> MappingResult:
+        histology = context.get("histology_label")
         get_mapped_terms = self.shared_data.get("get_mapped_terms")
-        response = get_mapped_terms(term)
+        response = get_mapped_terms(term, histology)
         return unpack_mapping_response(response)
 
 

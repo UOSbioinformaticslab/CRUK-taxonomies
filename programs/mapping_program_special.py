@@ -86,7 +86,14 @@ def rule_matches(rule, cruk_label, topography_label, histology_label):
     cruk_label = normalise_label(cruk_label)
     topography_label = normalise_label(topography_label)
     histology_label = normalise_label(histology_label)
+    excluded_topographies = rule.get("exclude_topography_exact", [])
 
+    if excluded_topographies and topography_matches(
+        topography_label,
+        excluded_topographies
+    ):
+        return False
+    
     if match_type == "cruk_label":
         return cruk_label == normalise_label(rule.get("cruk_label"))
 

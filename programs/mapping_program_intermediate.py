@@ -78,6 +78,14 @@ def get_intermediate_mapped_terms(input_term, histology_text=None):
 
     mapping = topography_mappings[term_key]
 
+    fallthrough_histologies = mapping.get("fallthrough_histology", [])
+
+    if (
+        histology_text is not None
+        and histology_text in fallthrough_histologies
+    ):
+        return None, [], []
+
     cruk_terms = mapping.get("default_CRUK") or []
     default_tcga_terms = mapping.get("default_tcga") or []
     tcga_labels_to_use = list(default_tcga_terms)

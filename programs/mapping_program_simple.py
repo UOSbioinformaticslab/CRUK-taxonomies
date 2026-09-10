@@ -7,9 +7,22 @@ from mapping_utils import resolve_labels_to_objects
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 
-SCHEMA_PATH = os.path.join(PROJECT_ROOT, "schemas", "schema_simple_1.1.2.json")
-FILTER_DATA_PATH = os.path.join(PROJECT_ROOT, "longer_filter_data.json")
-LABEL_KEY_DICT_PATH = os.path.join(PROJECT_ROOT, "label_key_dict.json")
+SCHEMA_PATH = os.path.join(
+    PROJECT_ROOT,
+    "schemas",
+    "schema_simple_1.1.2.json"
+)
+
+FILTER_DATA_PATH = os.path.join(
+    PROJECT_ROOT,
+    "longer_filter_data.json"
+)
+
+LABEL_KEY_DICT_PATH = os.path.join(
+    PROJECT_ROOT,
+    "label_key_dict.json"
+)
+
 
 with open(SCHEMA_PATH, encoding="utf-8") as file:
     schema = json.load(file)
@@ -19,6 +32,7 @@ with open(LABEL_KEY_DICT_PATH, encoding="utf-8") as file:
 
 with open(FILTER_DATA_PATH, encoding="utf-8") as file:
     filter_data = json.load(file)
+
 
 topography_mappings = schema["topography_mappings"]
 
@@ -62,24 +76,52 @@ def find_topography_mapping_key(input_term):
     if input_prefix:
         for schema_key in topography_mappings:
             schema_prefix = get_icdo_prefix(schema_key)
+
             if schema_prefix == input_prefix:
                 return schema_key
 
     return None
 
 
-def get_mapped_terms(input_term):
+def get_mapped_terms(input_term, histology_label=None):
     term_key = find_topography_mapping_key(input_term)
 
     if term_key is None:
         cruk_objects = []
         tcga_objects = []
+
     else:
         mapping = topography_mappings[term_key]
+
         cruk_terms = mapping.get("default_CRUK") or []
         tcga_terms = mapping.get("default_tcga") or []
 
-        cruk_objects = resolve_labels_to_objects(cruk_terms, label_key_dict, filter_data)
-        tcga_objects = resolve_labels_to_objects(tcga_terms, label_key_dict, filter_data)
+        # Histology-specific TCGA exclusions.
+        # Example:
+        # C20 Rectum + 8070/3 Squamous cell carcinoma, NOS
+        # should retain Rectal cancer but should not return
+        # READ (Rectum adenocarcinoma).
+        tcga_null_histologies = mapping.get(
+            "tcga_null_histology",
+            []
+        )
+
+        if (
+            histology_label is not None
+            and histology_label.strip() in tcga_null_histologies
+        ):
+            tcga_terms = []
+
+        cruk_objects = resolve_labels_to_objects(
+            cruk_terms,
+            label_key_dict,
+            filter_data
+        )
+
+        tcga_objects = resolve_labels_to_objects(
+            tcga_terms,
+            label_key_dict,
+            filter_data
+        )
 
     return term_key, cruk_objects, tcga_objects

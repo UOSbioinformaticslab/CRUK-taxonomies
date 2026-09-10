@@ -255,10 +255,8 @@
                 "C51-C58 Female genital organs",
                 "C51 Vulva",
                 "C52 Vagina",
-                "C53 Cervix uteri",
                 "C54 Corpus uteri",
                 "C55 Uterus, NOS",
-                "C56 Ovary",
                 "C57 Other and unspecified female genital organs",
                 "C58 Placenta"
             ],
@@ -273,10 +271,8 @@
                 "C51-C58 Female genital organs",
                 "C51 Vulva",
                 "C52 Vagina",
-                "C53 Cervix uteri",
                 "C54 Corpus uteri",
                 "C55 Uterus, NOS",
-                "C56 Ovary",
                 "C57 Other and unspecified female genital organs",
                 "C58 Placenta"
             ],
@@ -494,6 +490,9 @@
         {
             "rule_name": "germ_cell_tumours",
             "match_type": "histology_exact",
+            "exclude_topography_exact": [
+                "C62 Testis"
+            ],
             "histology_exact": [
                 "9060/3 Dysgerminoma",
                 "9061/3 Seminoma, NOS",
@@ -640,8 +639,6 @@
             "topography_exact": [
                 "C60-C63 Male genital organs",
                 "C60 Penis",
-                "C61 Prostate gland",
-                "C62 Testis",
                 "C63 Other and unspecified male genital organs"
             ],
             "return_CRUK": [
